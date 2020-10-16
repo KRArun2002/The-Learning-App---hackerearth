@@ -4,14 +4,17 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron
     Form, FormGroup, Input, Label  } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
+const img = require("../images/top_pic.gif");
 
 class Header extends Component {
 
     constructor(props) {
         super();
+        
         this.state= {
             isNavOpen: false,
-            isModalOpen: false
+            isModalOpen: false,
+            isOpen: false
         };
         this.toggleNav=this.toggleNav.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
@@ -30,6 +33,14 @@ class Header extends Component {
         this.setState({
           isModalOpen: !this.state.isModalOpen
         });
+      }
+
+      handleOpen = () => {
+        this.setState({ isOpen: true })
+      }
+    
+      handleClose = () => {
+         this.setState({ isOpen: false })
       }
 
       handleLogin(event) {
@@ -99,6 +110,12 @@ class Header extends Component {
         </div>
       </div>
        </Jumbotron>
+
+        <div>
+            <img src={img} height="400px" width="1200px"/>
+        </div>
+        <br/>
+        <br/>
 
        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
            <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>

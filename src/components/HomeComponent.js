@@ -6,7 +6,7 @@ import Slideshow from './SlideShowComponent';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
 const s = {
-    container: "screenW screenH dGray col",
+    container: "screenW screenH col",
     header: "flex1 fCenter fSize2",
     main: "flex8 white",
     footer: "flex1 fCenter"
@@ -32,6 +32,7 @@ function RenderCard({item}) {
     );
 }
 
+
 const Home = (props) => {
     const subject = props.subject.map((sub) => {
       return (
@@ -44,6 +45,7 @@ const Home = (props) => {
     
     return(
         <>
+        
         <div className={s.container}>
             <Slideshow slides={slides} />
         </div>
