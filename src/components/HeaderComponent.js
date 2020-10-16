@@ -48,22 +48,26 @@ class Header extends Component {
             <NavbarToggler onClick={this.toggleNav}/>
             <NavbarBrand className="mr-5" href="/">
             <img src="assets/images/logo.png" height="45" width="55"
-                    alt="HomeLearn" />   
+                    alt="HomeLearn" />  
+                   &nbsp; &nbsp; HomeLearning 
             </NavbarBrand>
 
         <Collapse isOpen={this.state.isNavOpen} navbar>
             <Nav navbar>
-                <NavItem>
+                <NavItem style={{marginRight: 12}}>
                     <NavLink className="nav-link"  to='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink className="nav-link" to='/aboutus'><span className="fa fa-book fa-lg"></span> Courses</NavLink>
+                <NavItem style={{marginRight: 12}}>
+                    <NavLink className="nav-link" to='/courses'><span className="fa fa-book fa-lg"></span> Courses</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink className="nav-link"  to='/menu'><span className="fa fa-gamepad fa-lg"></span> Gamify</NavLink>
+                <NavItem style={{marginRight: 12}}>
+                    <NavLink className="nav-link"  to='/gamify'><span className="fa fa-gamepad fa-lg"></span> Gamify</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink className="nav-link" to='/contactus'><span className="fa fa-globe fa-lg"></span> PopularWeb</NavLink>
+                <NavItem style={{marginRight: 12}}>
+                    <NavLink className="nav-link" to='/popularweb'><span className="fa fa-globe fa-lg"></span> PopularWeb</NavLink>
+                </NavItem>
+                <NavItem style={{marginRight: 12}}>
+                    <NavLink className="nav-link" to='/contact-us'><span className="fa fa-phone fa-lg"></span> Contact Us</NavLink>
                 </NavItem>
             </Nav>
             <Nav className="ml-auto" navbar>

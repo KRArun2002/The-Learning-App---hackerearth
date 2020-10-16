@@ -1,5 +1,18 @@
 import React from 'react';
+import slide1 from "../images/slide_image1.gif";
+import slide2 from "../images/slide_image2.png";
+import slide3 from "../images/slide_image3.jpg";
+import Slideshow from './SlideShowComponent';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+
+const s = {
+    container: "screenW screenH dGray col",
+    header: "flex1 fCenter fSize2",
+    main: "flex8 white",
+    footer: "flex1 fCenter"
+  };
+
+  const slides = [slide1, slide2, slide3];
 
 function RenderCard({item}) {
     return(
@@ -30,6 +43,12 @@ const Home = (props) => {
 
     
     return(
+        <>
+        <div className={s.container}>
+            <Slideshow slides={slides} />
+        </div>
+        <br/>
+        <br/>
         <div className="container">
             <div className="row">
                 <div className="col-12">
@@ -41,6 +60,7 @@ const Home = (props) => {
                 {subject}
             </div>
         </div>
+        </>
 
     );
 }
