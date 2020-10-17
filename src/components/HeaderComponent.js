@@ -4,6 +4,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron
     Form, FormGroup, Input, Label  } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
+
 const img = require("../images/top_pic.gif");
 
 class Header extends Component {

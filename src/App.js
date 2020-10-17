@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Main from './components/MainComponent';
-import Header from './components/HeaderComponent';
-import Footer from './components/FooterComponent';
-import Home from './components/HomeComponent'
 import { BrowserRouter } from 'react-router-dom';
 // import MediumBlogs from "./components/MediumBlogs/mediumBlogs.jsx";
 // import axios from 'axios';
