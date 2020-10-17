@@ -1,0 +1,151 @@
+.blog-container {
+  border-radius: 10px;
+  color: #586069;
+  background-color: #fff;
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.1);
+  /* padding: 2rem; */
+  cursor: pointer;
+  height: 200px;
+}
+
+.blog-title {
+  color: #262626;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 14px;
+  margin-top: 32px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.small {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666666;
+  padding: 0px 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin: 0px;
+}
+
+.blog-card {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.blog-card:hover::before {
+  transform: scale(30);
+}
+
+.answer:hover {
+  color: white !important;
+  text-decoration: none;
+  cursor: default;
+  }
+
+.tag:hover{
+  cursor:default;
+}
+
+.btn-sm:hover{
+  cursor:default;
+}
+
+.bodyCardClass{
+  padding:10px
+}
+.oneDiv{
+  width: 20%;
+}
+
+.twoDiv{
+  width:15%;
+  padding: 2px;
+  margin: 0px 10px;
+}
+.bodyDiv{
+  width:50%;
+}
+.CardTitleStyle{
+  margin: 0px;
+}
+
+.cardSubStyle{
+  margin:10px 0px;
+}
+
+
+.cardTextStyle{
+  margin: 5px 0px;
+}
+
+.TagBlock{
+  width:50%;
+  margin:5px 0px 0px 0px;
+}
+.viewCount{
+  width: 50%;
+  margin:5px 0px 0px 0px;
+}
+
+.answered{
+  width: 50%;
+  text-align: center;
+}
+
+.authIMG{
+  width: 20%;
+  text-align: '';
+}
+
+.authName{
+  width: 50%;
+  text-align: '';
+}
+
+.rep{
+  font-size: 14px;
+}
+
+.AuthorImage{
+  width: 150px;
+  height: 110px;
+  align-self: center;
+}
+
+.card:hover{
+  cursor: pointer;
+  background-color: rgb(209, 218, 226);
+}
+
+.card
+{
+  border: 1px solid silver;
+  box-shadow: 0 0 5px gray;
+  padding: 5px;
+  width:60em;
+  border-radius:20px;
+  margin: 0 auto; /* Added */
+  margin-bottom: 10px; /* Added */
+  margin-top: 20px;
+  height: auto;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}

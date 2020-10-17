@@ -9,22 +9,22 @@ function Footer(props) {
                 <div className="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul className="list-unstyled">
-                        <li><Link to='/home'>Home</Link></li>
-                        <li><Link to=''>About Us</Link></li>
-                        <li><Link to=''>Menu</Link></li>
-                        <li><Link to=''>Contact Us</Link></li>                    
-                    </ul>
+                        <li><Link to='/home'>Home</Link></li><br/>
+                        <li><Link to=''>Courses</Link></li><br/>
+                        <li><Link to=''>Gamify</Link></li><br/>
+                        <li><Link to=''>Discussion Forum </Link> </li><br/>
+                        <li><Link to=''>Contact Us</Link></li>                    </ul>
                 </div>
                 <div className="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
-		              121, Clear Water Bay Road<br />
-		              Clear Water Bay, Kowloon<br />
-		              HONG KONG<br />
-		              <i className="fa fa-phone fa-lg"></i>: +852 1234 5678<br />
-		              <i className="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
-		              <i className="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">
-                         confusion@food.net</a>
+		              100, Golden Sea Road<br />
+		              Golden Sea, ABC<br />
+		              INDIA<br /><br></br>
+		              <i className="fa fa-phone fa-lg"></i>   : +123 456 7891<br /><br></br>
+		              <i className="fa fa-fax fa-lg"></i>  : +234 567 8912<br /><br></br>
+		              <i className="fa fa-envelope fa-lg"></i>  : <a href="mailto:confusion@food.net">
+                         homelearning@learn.net</a>
                     </address>
                 </div>
                 <div className="col-12 col-sm-4 align-self-center">

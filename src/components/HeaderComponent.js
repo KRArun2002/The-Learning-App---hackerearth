@@ -4,14 +4,17 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron
     Form, FormGroup, Input, Label  } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
+const img = require("../images/top_pic.gif");
 
 class Header extends Component {
 
     constructor(props) {
         super();
+        
         this.state= {
             isNavOpen: false,
-            isModalOpen: false
+            isModalOpen: false,
+            isOpen: false
         };
         this.toggleNav=this.toggleNav.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
@@ -32,6 +35,14 @@ class Header extends Component {
         });
       }
 
+      handleOpen = () => {
+        this.setState({ isOpen: true })
+      }
+    
+      handleClose = () => {
+         this.setState({ isOpen: false })
+      }
+
       handleLogin(event) {
           this.toggleModal();
           alert("Username: "+ this.username.value+ "Password: "+ this.password.value
@@ -48,22 +59,26 @@ class Header extends Component {
             <NavbarToggler onClick={this.toggleNav}/>
             <NavbarBrand className="mr-5" href="/">
             <img src="assets/images/logo.png" height="45" width="55"
-                    alt="HomeLearn" />   
+                    alt="HomeLearn" />  
+                   &nbsp; &nbsp; HomeLearning 
             </NavbarBrand>
 
         <Collapse isOpen={this.state.isNavOpen} navbar>
             <Nav navbar>
-                <NavItem>
+                <NavItem style={{marginRight: 12}}>
                     <NavLink className="nav-link"  to='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink className="nav-link" to='/aboutus'><span className="fa fa-book fa-lg"></span> Courses</NavLink>
+                <NavItem style={{marginRight: 12}}>
+                    <NavLink className="nav-link" to='/courses'><span className="fa fa-book fa-lg"></span> Courses</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink className="nav-link"  to='/menu'><span className="fa fa-gamepad fa-lg"></span> Gamify</NavLink>
+                <NavItem style={{marginRight: 12}}>
+                    <NavLink className="nav-link"  to='/gamify'><span className="fa fa-gamepad fa-lg"></span> Gamify</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink className="nav-link" to='/contactus'><span className="fa fa-globe fa-lg"></span> PopularWeb</NavLink>
+                <NavItem style={{marginRight: 12}}>
+                    <NavLink className="nav-link" to='/popularweb'><span className="fa fa-globe fa-lg"></span> PopularWeb</NavLink>
+                </NavItem>
+                <NavItem style={{marginRight: 12}}>
+                    <NavLink className="nav-link" to='/contact-us'><span className="fa fa-phone fa-lg"></span> Contact Us</NavLink>
                 </NavItem>
             </Nav>
             <Nav className="ml-auto" navbar>
@@ -95,6 +110,12 @@ class Header extends Component {
         </div>
       </div>
        </Jumbotron>
+
+        <div>
+            <img src={img} height="400px" width="1200px"/>
+        </div>
+        <br/>
+        <br/>
 
        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
            <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>

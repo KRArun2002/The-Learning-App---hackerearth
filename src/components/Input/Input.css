@@ -1,0 +1,20 @@
+.BigInput {
+    width: 965px;
+    color: #25523B;
+    border: 1px solid #5AAB61;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    margin: 0 40px auto;
+}
+
+
+
+.SmallInput{
+    flex: 2;
+    height:100px;
+    width:450px;
+    margin-left: 40px;
+    margin-right: 5px;
+    border: 0;
+    border-bottom: 1px solid silver;
+}
