@@ -43,8 +43,8 @@ class Main extends React.Component {
     render() {
       return <section className="app-title">
         <div className="app-title-content">
-          <h1>Hello   Latest News</h1>
-          <p>Covering March & April 2015</p>
+          <h1>Trending Blogs</h1>
+          <p>Covering hot topics, ranging from business to technology</p>
          
         </div>
       </section>
@@ -84,7 +84,7 @@ class Main extends React.Component {
     render() {
       return (
         <div className="card-body">
-          <p className="date">March 20 2015</p>
+          <p className="date">October 2020</p>
           
           <h2>{this.props.title}</h2>
           

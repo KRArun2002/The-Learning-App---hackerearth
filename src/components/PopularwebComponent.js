@@ -3,7 +3,7 @@ import FrameMotionComponent from './FrameMotionComponent';
 import { useCycle } from "framer-motion";
 import Main from './BlogPopularcomponent';
 import "../App.css";
-
+import "./popularweb.css";
 
 import {motion1Scene, motion2Scene, motion3Scene} from './Scenes'; 
   
@@ -24,10 +24,10 @@ function Popular() {
   
     return (
         <>
-      <div>
+      <div class="back">
       <Main />
       <br></br>
-        <div className="hero">
+        <div className="hero back">
           <FrameMotionComponent
             img={currentScene.image1}
             className="animal-image animal-image__one"

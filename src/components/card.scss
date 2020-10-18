@@ -6,6 +6,10 @@ body, html {
     display:block;
     padding: 30px;
   }
+
+  .button{
+    color: red;
+  }
   
   .app-title {
     display:inline-block;
@@ -34,7 +38,7 @@ body, html {
   
   .app-title-content {
     position:relative;
-    top:50%;
+    bottom: 20%;
     left: 50%;
     width:100%;
     text-align:center;
@@ -50,12 +54,11 @@ body, html {
   .app-card-list {
     display:inline-block;
     width:100%;
-    float:right;
     margin:0;
-    min-height: 75vh;
+    // min-height: 75vh;
     white-space:normal;
     overflow-x: scroll;
-    margin-top:-70px;
+    // margin-top:70px;
     
     &::-webkit-scrollbar { 
       display: none; 
@@ -70,8 +73,10 @@ body, html {
     .card {
       margin: 0px 10px 70px;
       display: inline-block;
-      // height: 90%;
-      
+       width: 40%;
+      .card-header {
+        height: 100%;
+      }
       .card-body {
           white-space: normal;
       }

@@ -4,6 +4,9 @@ import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Forum from './ForumComponent';
 import MediumBlogs from './MediumBlogs/mediumBlogs';
+import MediumBlogs1 from './MediumBlogs/mediumblog1';
+import MediumBlogs2 from './MediumBlogs/mediumblogs2'
+import MediumBlogs3 from './MediumBlogs/mediumblogs3';
 import UxPlanetBlogs from './MediumBlogs/uxplanet';
 import { SUBJECT } from '../shared/subject'
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -48,6 +51,22 @@ class Main extends Component {
         )
       }
 
+      const mediumPage1 = () => {
+        return(
+          <MediumBlogs1 />
+        )
+      }
+      const mediumPage2 = () => {
+        return(
+          <MediumBlogs2 />
+        )
+      }
+      const mediumPage3 = () => {
+        return(
+          <MediumBlogs3 />
+        )
+      }
+
       const uxBlog = () => {
         return(
           <UxPlanetBlogs />
@@ -62,6 +81,9 @@ class Main extends Component {
             <Route path='/home' component={HomePage} />
             <Route path='/forum' component={forumPage} />
             <Route path='/mediumblogs' component={mediumPage} />
+            <Route path='/mediumblogsbusiness' component={mediumPage1} />
+            <Route path='/mediumblogseducation' component={mediumPage2} />
+            <Route path='/mediumblogsleadership' component={mediumPage3} />
             <Route path='/uxplanetblogs' component={uxBlog} />
            <Route path='/popularweb' component={popularpage} />
            <Route path='/stackoverflowblogs' component={() => { 
