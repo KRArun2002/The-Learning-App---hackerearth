@@ -27,7 +27,7 @@ function RenderCard({item}) {
             <CardText>
                 <ul>
                     <li>
-                       <Link to= {item.path1}> { item.subject1 } </Link></li>
+                    <Link to= {item.path1}> { item.subject1 } </Link></li>
                     <li>
                     <Link to= {item.path2}>{ item.subject2 } </Link></li>
                     <li>

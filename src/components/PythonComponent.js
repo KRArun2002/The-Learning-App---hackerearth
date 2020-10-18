@@ -5,10 +5,57 @@ import Mavatar from '../images/mavatar.png/.';
 import M1avatar from '../images/m1avatar.png/.';
 import "./Course.css";
 import Header from './HeaderComponent';
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron
+  ,Button, Modal, ModalHeader, ModalBody,
+  Form, FormGroup, Input, Label  } from 'reactstrap';
 
 
 class Python extends React.Component {
-render(){
+  constructor() {
+    super();
+    
+    this.state= {
+        isNavOpen: false,
+        isModalOpen: false,
+        isOpen: false
+    };
+    this.toggleNav=this.toggleNav.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
+    
+  }
+
+  toggleNav() {
+    this.setState({
+      isNavOpen: !this.state.isNavOpen
+    });
+  
+}
+
+toggleModal() {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen
+    });
+  }
+
+  handleOpen = () => {
+    this.setState({ isOpen: true })
+  }
+
+  handleClose = () => {
+     this.setState({ isOpen: false })
+  }
+
+  handleLogin(event) {
+      this.toggleModal();
+      alert("Username: "+ this.username.value+ "Password: "+ this.password.value
+        +"Remember: " + this.remember.checked);
+        event.preventDefault();
+  }
+
+
+
+  render(){
     return (
       <div style={{marginLeft: 20}} className="container-fluid" >
         <br/><br/>
@@ -17,7 +64,7 @@ render(){
         <div className="grid-container1">
             <div className="grid-child">
               <br/>
-            <h1>PYTHON  <button className="button" onclick="#">ENROLL NOW</button> </h1>  
+            <h1>PYTHON  <button className="button" onClick={this.toggleModal}>ENROLL NOW</button> </h1>  
         
             <h3>ABOUT THIS COURSE</h3>
            
@@ -123,16 +170,43 @@ By the end of the specialization, you’ll be writing programs that query Intern
       </div>
       </div>
       <br />
-      <button className="button" onclick="#">ENROLL NOW</button>
+      <button className="button" onClick={this.toggleModal}>ENROLL NOW</button>
       <br/>
       </div>
       <br/>
+      <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
+           <ModalBody>
+               <Form onSubmit={this.handleLogin}>
+                   <FormGroup>
+                       <Label htmlFor="username">Username</Label>
+                       <Input type="text" id="username" name="username" 
+                            />
+                   </FormGroup>
+                   <FormGroup>
+                       <Label htmlFor="password">Password</Label>
+                       <Input type="password" id="password" name="password"
+                            />
+                   </FormGroup>
+                   <FormGroup check>
+                       <Label check>
+                           <Input type="checkbox" name="remember"
+                             /> 
+                           Remember me
+                       </Label>
+                   </FormGroup>
+                   <Button type="submit" value="submit" color="bg-primary">Login</Button>
+
+               </Form>
+           </ModalBody>
+       </Modal>
+
       
       </div> 
       
     
       
-    )
+    );
   }
 }
   export default Python;

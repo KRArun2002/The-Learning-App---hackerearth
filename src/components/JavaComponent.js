@@ -3,9 +3,55 @@ import J3 from '../images/J3.jpg';
 import Favatar from '../images/favatar.png';
 import Mavatar from '../images/mavatar.png';
 import M1avatar from '../images/m1avatar.png';
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron
+  ,Button, Modal, ModalHeader, ModalBody,
+  Form, FormGroup, Input, Label  } from 'reactstrap';
 import "./Course.css";
 
 class Java extends React.Component {
+  constructor() {
+    super();
+    
+    this.state= {
+        isNavOpen: false,
+        isModalOpen: false,
+        isOpen: false
+    };
+    this.toggleNav=this.toggleNav.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
+    
+  }
+
+  toggleNav() {
+    this.setState({
+      isNavOpen: !this.state.isNavOpen
+    });
+  
+}
+
+toggleModal() {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen
+    });
+  }
+
+  handleOpen = () => {
+    this.setState({ isOpen: true })
+  }
+
+  handleClose = () => {
+     this.setState({ isOpen: false })
+  }
+
+  handleLogin(event) {
+      this.toggleModal();
+      alert("Username: "+ this.username.value+ "Password: "+ this.password.value
+        +"Remember: " + this.remember.checked);
+        event.preventDefault();
+  }
+
+
 render(){
     return (
       <div style={{marginLeft: 60}, {marginRight: 60}} className="container-fluid">
@@ -15,7 +61,7 @@ render(){
         <div className="grid-container1">
             <div className="grid-child">
               <br/>
-            <h1>JAVA    <button className="button" onclick="#">ENROLL NOW</button> </h1>
+            <h1>JAVA    <button className="button"  onClick={this.toggleModal}>ENROLL NOW</button> </h1>
         
             <h3>ABOUT THIS COURSE</h3>
            
@@ -119,13 +165,37 @@ render(){
       </div>
       </div>
       <br />
-      <button className="button" onclick="#">ENROLL NOW</button>
+      <button className="button"  onClick={this.toggleModal}>ENROLL NOW</button>
       </div>
       <br/>
       
+           <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
+           <ModalBody>
+               <Form onSubmit={this.handleLogin}>
+                   <FormGroup>
+                       <Label htmlFor="username">Username</Label>
+                       <Input type="text" id="username" name="username" 
+                            />
+                   </FormGroup>
+                   <FormGroup>
+                       <Label htmlFor="password">Password</Label>
+                       <Input type="password" id="password" name="password"
+                            />
+                   </FormGroup>
+                   <FormGroup check>
+                       <Label check>
+                           <Input type="checkbox" name="remember"
+                             /> 
+                           Remember me
+                       </Label>
+                   </FormGroup>
+                   <Button type="submit" value="submit" color="bg-primary">Login</Button>
+
+               </Form>
+           </ModalBody>
+       </Modal>
       </div>
-      
-    
       
     )
   }

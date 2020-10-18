@@ -16,7 +16,6 @@ function Studentdetails() {
 					<th>Sex</th>
 					<th>School</th>
 					<th>Enrolled Course</th>
-					<th>Enrolled Course</th>
 				</tr>
 			</thead>
 			<tbody>

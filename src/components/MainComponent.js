@@ -16,6 +16,7 @@ import Course from './PhysicsComponent';
 import Java from './JavaComponent';
 import Python from './PythonComponent';
 import Biology from './BiologyComponent';
+import Physics from './PhysicsComponent';
 
 class Main extends Component {
 
@@ -123,7 +124,7 @@ class Main extends Component {
            <Route path='/popularweb' component={popularpage} />
            <Route path='/java' component = {java} />
            <Route path='/python' component= {python} />
-           <Route path='physics' component={physics} />
+           <Route path='/physics' component={physics} />
            <Route path='/biology' component = {biology} />
            <Route path='/stackoverflowblogs' component={() => { 
               window.location.href = 'https://communitylearn.herokuapp.com/'; 
