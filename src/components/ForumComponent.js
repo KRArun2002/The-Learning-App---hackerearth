@@ -26,7 +26,9 @@ class Forum extends React.Component {
  render() {
     let allPostList = this.state.allPosts.slice(0,3).map((post, index) => {
     return (
-    <Post key = {index} postData = {post} />
+      <div>
+      <Post key = {index} postData = {post} />
+      </div>
       )
     });
     return allPostList;
