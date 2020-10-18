@@ -112,9 +112,7 @@ class Header extends Component {
       </div>
        </Jumbotron>
 
-        <div>
-            <img src={img} height="400px" width="1200px"/>
-        </div>
+        
         <br/>
         <br/>
 

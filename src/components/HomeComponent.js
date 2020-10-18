@@ -3,7 +3,7 @@ import slide1 from "../images/slide_image1.gif";
 import slide2 from "../images/slide_image2.png";
 import slide3 from "../images/slide_image3.jpg";
 import Slideshow from './SlideShowComponent';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Jumbotron } from 'reactstrap';
 
 const s = {
     container: "screenW screenH col",
@@ -16,6 +16,7 @@ const s = {
 
 function RenderCard({item}) {
     return(
+        <>
         <Card>
             <CardImg width="100" height="250" src={item.image} alt={item.name} />
             <CardBody>
@@ -29,6 +30,7 @@ function RenderCard({item}) {
             </CardText>
             </CardBody>
        </Card>
+       </>
     );
 }
 
@@ -51,6 +53,7 @@ const Home = (props) => {
         </div>
         <br/>
         <br/>
+        
         <div className="container">
             <div className="row">
                 <div className="col-12">

@@ -1,5 +1,6 @@
 import React from "react";
 import "./blogCard.css";
+import {Col} from 'reactstrap';
 
 import {
   Card,
@@ -26,10 +27,11 @@ export default function BlogCard({ blog }) {
            <p class="small">{blog.description}</p>
          </a>
        </div> */}
-
-  <Card class='FullQuestion' onClick={() => openUrlInNewTab(blog.url)}>
-    <a class="blog-card" href={blog.link}>
+  <Col xs={10} md={12}>
+  <Card className='FullQuestion' onClick={() => openUrlInNewTab(blog.url)}>
+    <a className="blog-card" href={blog.link}>
     <CardBody className='row bodyCardClass' >
+    
       <div className="column oneDiv">
       </div>
       <div className='column twoDiv' >
@@ -42,9 +44,11 @@ export default function BlogCard({ blog }) {
         Published: {blog.pubDate}
         </CardSubtitle>
       </div>
+      
     </CardBody>
     </a>
   </Card>
+  </Col>
   </div>
     
 
