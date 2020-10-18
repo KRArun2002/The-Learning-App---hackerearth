@@ -1,3 +1,47 @@
+In this Home learn web application,there are 5 important sections namely Home,Courses,Popular Web and Contact US.It consists of Header and Footer
+
+## HEADER
+The header consists of links to pages mentioned above.
+On the top left corner there is a logo displayed and also in the right side Login and Signup option has been inserted.
+Login and SignUp consists of dashboard.
+
+## HOME
+There is a header image which says Home learn with a tagline.
+A slideshow of images has been displayed below which the number of courses offered by Home Learn for students has been displayed.
+Each course card navigates to the courses displayed.
+
+## COURSES
+This page consits of three sections
+
+## ABOUT THE COURSE
+ This section gives a small description and importance of the course.
+
+## WHAT YOU WILL LEARN
+ This section consist of the modules of the course.
+ Each hoverable module has contents with a video link.
+ 
+## INSTRUCTORS
+ This section consist of individual card for each of the instructors of the course.
+
+ The section on the right side gives the basic information about the course.
+ It also consist of enroll button which navigates to Login and SignUp option.
+
+## POPULAR WEB
+It consists of discussions in the very popular trending websites such as medium,stackoverflow questions. The best place to clear doubts!! 
+Answers to almost all the trending questions are available here.
+
+## DISCUSSION FORUM
+A very interactive forum for students . Here they can comment and clarify their doubts.
+Also Students can vote based on the accuracy of the correct answer.
+Clap option is also available.
+
+## CONTACT US
+Consists of the address , phone no and the location of the instution.
+
+## FOOTER
+ the footer consist of discussion forum and contact details .
+ It also consist of social icons.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
