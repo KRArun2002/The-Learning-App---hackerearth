@@ -15,6 +15,8 @@ const s = {
 
   const slides = [slide1, slide2, slide3];
 
+  const img = require('../images/top_pic.gif');
+
 function RenderCard({item}) {
     return(
         <React.Fragment>
@@ -79,6 +81,13 @@ const Home = (props) => {
             </div>
             <div className="row">
                 {subject}
+            </div>
+        </div>
+        <div className="container">
+            <div className="col">
+                <div className="col-12">
+                <img src={img} alt="img" height="600px"></img>
+                </div>
             </div>
         </div>
         </>
