@@ -14,15 +14,15 @@ function Toolbar() {
 	return (
 		<>
 			<IconContext.Provider value={{ color: '#fff' }}>
-				<div className="navbar">
-					<Link to="#" className="menu-bars">
+				<div className="navbar1">
+					<Link to="#" className="menu-bars1">
 						<FaIcons.FaBars onClick={showSidebar} />
 					</Link>
 				</div>
-				<nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-					<ul className="nav-menu-items" onClick={showSidebar}>
-						<li className="navbar-toggle">
-							<Link to="#" className="menu-bars">
+				<nav className={sidebar ? 'nav-menu1 active' : 'nav-menu1'}>
+					<ul className="nav-menu-items1" onClick={showSidebar}>
+						<li className="navbar1-toggle">
+							<Link to="#" className="menu-bars1">
 								<AiIcons.AiOutlineClose />
 							</Link>
 						</li>

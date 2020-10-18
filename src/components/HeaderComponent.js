@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron
     ,Button, Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input, Label  } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-
+import { NavLink, withRouter } from 'react-router-dom';
 
 const img = require("../images/top_pic.gif");
 
@@ -22,6 +21,11 @@ class Header extends Component {
         this.handleLogin = this.handleLogin.bind(this);
 
     }
+
+    submitForm (e) {
+        e.preventDefault()
+        this.props.history.push('/dashboard'); // <--- The page you want to redirect your user to.
+      }
 
     toggleNav() {
         this.setState({
@@ -73,9 +77,6 @@ class Header extends Component {
                     <NavLink className="nav-link" to='/courses'><span className="fa fa-book fa-lg"></span> Courses</NavLink>
                 </NavItem>
                 <NavItem style={{marginRight: 12}}>
-                    <NavLink className="nav-link"  to='/gamify'><span className="fa fa-gamepad fa-lg"></span> Gamify</NavLink>
-                </NavItem>
-                <NavItem style={{marginRight: 12}}>
                     <NavLink className="nav-link" to='/popularweb'><span className="fa fa-globe fa-lg"></span> PopularWeb</NavLink>
                 </NavItem>
                 <NavItem style={{marginRight: 12}}>
@@ -99,20 +100,9 @@ class Header extends Component {
         </div>
       </Navbar>
 
-      <Jumbotron>
-      <div className="container">
-        <div className="row text-center">
-            <div className="col-12">
-                <h2>Home Learn</h2>
-            </div>            
-            <div className="col-12">
-                <h3>Making Learning Fun</h3>
-            </div>            
-        </div>
-      </div>
-       </Jumbotron>
 
-       <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+
+       <Modal onSubmit={this.submitForm.bind(this)} isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
            <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
            <ModalBody>
                <Form onSubmit={this.handleLogin}>
@@ -143,4 +133,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

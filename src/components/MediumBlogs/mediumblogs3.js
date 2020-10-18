@@ -27,6 +27,9 @@ class MediumBlogs3 extends Component {
     return (
       <React.Fragment>
           <div className= "back1">
+          <br/>
+            <h1 style={{color: "black", marginLeft: 400}}><mark>MEDIUM LEADERSHIP</mark></h1>
+            <br/>
         {this.state.items.map((item) => (
           <BlogCard key={item.key} blog={item} />
         ))}

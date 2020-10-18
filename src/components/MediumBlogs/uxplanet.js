@@ -27,6 +27,9 @@ class UxPlanetBlogs extends Component {
     return (
       <React.Fragment>
         <div className="backgr">
+        <br/>
+            <h1 style={{color: "white", marginLeft: 400}}>UXPLANET BLOGS</h1>
+            <br/>
         {this.state.items.map((item) => (
           <BlogCard key={item.key} blog={item} />
         ))}

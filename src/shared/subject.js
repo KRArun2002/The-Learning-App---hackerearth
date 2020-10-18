@@ -4,17 +4,23 @@ export const SUBJECT = [
         id: 0,
         name: 'Technology',
         image: '/assets/images/technology.jpg',
-        subject1: 'Azure',
-        subject2: 'Django',
-        subject3: 'Python'
+        subject1: 'Python',
+        subject2: 'Java',
+        subject3: 'Azure',
+        path1: '/python',
+        path2: '/java',
+        path3: '/azure'
     },
     {
         id: 1,
-        name: 'Language',
+        name: 'Subjects',
         image: '/assets/images/language.png',
-        subject1: 'English',
-        subject2: 'French',
-        subject3: 'Tamil'
+        subject1: 'Physics',
+        subject2: 'Biology',
+        subject3: 'Maths',
+        path1: '/physics',
+        path2: '/biology',
+        path3: '/azure'
     },
     {
         id: 2,
@@ -22,7 +28,10 @@ export const SUBJECT = [
         image: '/assets/images/business.png',
         subject1: 'Corporate Finance',
         subject2: 'Statistics',
-        subject3: 'Economics'
+        subject3: 'Economics',
+        path1: '/python',
+        path2: '/java',
+        path3: '/azure'
     }
 
 

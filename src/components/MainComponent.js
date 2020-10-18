@@ -11,7 +11,11 @@ import UxPlanetBlogs from './MediumBlogs/uxplanet';
 import { SUBJECT } from '../shared/subject'
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import Popular from './PopularwebComponent';
-
+import LoginPage from './LoginPageComponent';
+import Course from './PhysicsComponent';
+import Java from './JavaComponent';
+import Python from './PythonComponent';
+import Biology from './BiologyComponent';
 
 class Main extends Component {
 
@@ -73,6 +77,36 @@ class Main extends Component {
         )
       }
 
+      const dashboard = () => {
+        return(
+          <LoginPage />
+        )
+      }
+
+      const java = () => {
+        return(
+          <Java />
+        )
+      }
+
+      const python = () => {
+        return (
+          <Python />
+        )
+      }
+
+      const physics = () => {
+        return(
+          <Course />
+        )
+      }
+
+      const biology = () => {
+        return(
+          <Biology />
+        )
+      }
+
     return (
       <>
       <div>
@@ -85,7 +119,12 @@ class Main extends Component {
             <Route path='/mediumblogseducation' component={mediumPage2} />
             <Route path='/mediumblogsleadership' component={mediumPage3} />
             <Route path='/uxplanetblogs' component={uxBlog} />
+            <Route path = '/dashboard' component={dashboard} />
            <Route path='/popularweb' component={popularpage} />
+           <Route path='/java' component = {java} />
+           <Route path='/python' component= {python} />
+           <Route path='physics' component={physics} />
+           <Route path='/biology' component = {biology} />
            <Route path='/stackoverflowblogs' component={() => { 
               window.location.href = 'https://communitylearn.herokuapp.com/'; 
               return null;

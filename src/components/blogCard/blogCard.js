@@ -20,7 +20,7 @@ export default function BlogCard({ blog }) {
   }
   return (
 
-    <div>
+    <div style={{marginLeft: 120}}>
        {/* <div class="blog-container" onClick={() => openUrlInNewTab(blog.url)}>
          <a class="blog-card" href={blog.link}>
            <h3 className="blog-title">{blog.title}</h3>
@@ -28,7 +28,7 @@ export default function BlogCard({ blog }) {
          </a>
        </div> */}
   <Col xs={10} md={12}>
-  <Card className='FullQuestion' onClick={() => openUrlInNewTab(blog.url)}>
+  <Card style={{backgroundColor: "lightgrey"}} className='FullQuestion' onClick={() => openUrlInNewTab(blog.url)}>
     <a className="blog-card" href={blog.link}>
     <CardBody className='row bodyCardClass' >
     

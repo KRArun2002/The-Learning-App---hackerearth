@@ -13,6 +13,7 @@ class Loginpage extends Component {
         return (
             <Router>
                 <Navbar />
+                <br/>
                 <Switch>
                     <Route path='/dashboard' component={Dashboard} />
                     <Route path="/studentdetail" component={Studentdetails} />
