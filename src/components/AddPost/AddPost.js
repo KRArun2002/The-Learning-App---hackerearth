@@ -29,7 +29,7 @@ class AddPost extends React.Component {
 
     render() {
         return (
-            <div className="Container">
+            <div className="Container2">
                 <Input
                     inputSize="BigInput"
                     placeholder="Add New Post!"
