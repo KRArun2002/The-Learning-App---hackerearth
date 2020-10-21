@@ -19,6 +19,7 @@ function Toolbar() {
 						<FaIcons.FaBars onClick={showSidebar} />
 					</Link>
 				</div>
+				<div className="menu-relative">
 				<nav className={sidebar ? 'nav-menu1 active' : 'nav-menu1'}>
 					<ul className="nav-menu-items1" onClick={showSidebar}>
 						<li className="navbar1-toggle">
@@ -38,6 +39,7 @@ function Toolbar() {
 						})}
 					</ul>
 				</nav>
+				</div>
 			</IconContext.Provider>
 		</>
 	);

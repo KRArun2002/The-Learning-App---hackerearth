@@ -24,10 +24,9 @@ function Popular() {
   
     return (
         <>
-      <div class="back">
+      <div className="back">
       <Main />
-      <br></br>
-        <div className="hero back">
+      <div className="hero back">
           <FrameMotionComponent
             img={currentScene.image1}
             className="animal-image animal-image__one"
@@ -40,7 +39,7 @@ function Popular() {
             img={currentScene.image3}
             className="animal-image animal-image__three"
           />
-        </div>
+      </div>
       </div>
       </>
     );

@@ -1,3 +1,6 @@
 .back2 {
     background-image: url("../../images/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
