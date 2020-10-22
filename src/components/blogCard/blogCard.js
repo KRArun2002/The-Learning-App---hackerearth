@@ -19,8 +19,10 @@ export default function BlogCard({ blog }) {
     }
   }
   return (
-
-    <div style={{marginLeft: 120}}>
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+        <div style={{marginLeft: 120}}>
        {/* <div class="blog-container" onClick={() => openUrlInNewTab(blog.url)}>
          <a class="blog-card" href={blog.link}>
            <h3 className="blog-title">{blog.title}</h3>
@@ -50,6 +52,10 @@ export default function BlogCard({ blog }) {
   </Card>
   </Col>
   </div>
+
+        </div>
+      </div>
+    </div>
     
 
 

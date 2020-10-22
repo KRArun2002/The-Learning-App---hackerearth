@@ -29,13 +29,12 @@ class AddPost extends React.Component {
 
     render() {
         return (
-            <div className="Container2">
+            <div>
                 <Input
                     inputSize="BigInput"
                     placeholder="Add New Post!"
                     changed ={(event)=>{this.onChangeHandler(event)}}
                 />
-                <br />
                 <Button
                     btnSize="BigButton"
                     title="Post"

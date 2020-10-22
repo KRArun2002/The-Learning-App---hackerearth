@@ -28,8 +28,10 @@ class UxPlanetBlogs extends Component {
       <React.Fragment>
         <div className="backgr">
         <br/>
-            <h1 style={{color: "white", marginLeft: 400}}>UXPLANET BLOGS</h1>
+        <div className="offset-3">
+            <h1 style={{color: "white"}}>UXPLANET BLOGS</h1>
             <br/>
+        </div>
         {this.state.items.map((item) => (
           <BlogCard key={item.key} blog={item} />
         ))}

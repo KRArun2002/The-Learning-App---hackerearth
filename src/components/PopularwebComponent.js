@@ -26,6 +26,7 @@ function Popular() {
         <>
       <div className="back">
       <Main />
+      <div className>
       <div className="hero back">
           <FrameMotionComponent
             img={currentScene.image1}
@@ -39,6 +40,7 @@ function Popular() {
             img={currentScene.image3}
             className="animal-image animal-image__three"
           />
+      </div>
       </div>
       </div>
       </>

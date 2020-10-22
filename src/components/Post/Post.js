@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Jumbotron } from 'reactstrap';
 import './Post.css';
 import Button from './../Button/Button';
 import Input from './../Input/Input';
@@ -59,43 +59,41 @@ class Post extends Component {
             )
         });
         return (
-                <div className="card">
-                    <div className="text-center">
-                        <h2>
+            <div className="container mt-3">
+            <div className="row">
+            <div className="col-12">
+            <div className="card1">
+                    <CardTitle>
+                    <center><h3>
                         {this.state.postData.postText}
-                        </h2>
-                    </div>
-                    <hr />
-                    <div className="card-body">
-                        <div className="container">
-                            <div className="row text-center">
-                                <div className="col-2 text-center mt-1 mb-1">
+                    </h3></center><hr />
+                    </CardTitle>
+                    <CardBody>
+                    <div className="container">
+                            <div className="row">
                                     <Button
                                         btnSize="SmallButton"
                                         clicked={() => { this.onClapHandler(this.state.postData._id) }}
                                         title="Clap!"
                                     />
-                                </div>
-                                <div className="text-center mt-1 mb-3">
-                                    <h4>{this.state.postData.clapsCount} Votes</h4>
+                                <div className="col-sm-3 col-5 mt-1 mb-3 offset-1">
+                                 <h5>{this.state.postData.clapsCount} Votes </h5> 
                                 </div>
                             </div>
                             <hr />
                             <div className="row">
-                                <div className="col-5 ml-4">
-                                    {this.state.postData.comments.length} Comments
+                                <div className="col-3 offset-1">
+                                    <h5>{this.state.postData.comments.length} Comments</h5>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-7 mt-1">
                                 <Input
                                     inputSize="SmallInput"
                                     type="text"
-                                    placeholder="Add New Comment!"
+                                    placeholder="Add New Comment"
                                     changed = {(event) => { this.onChangeHandler(event) }}
                                 />
-                                </div>
-                                <div className="col-5 mt-1">
+                                <div className="col-sm-1 col-5 mt-1">
                                     <Button
                                     btnSize="SmallButton"
                                     clicked={() => { this.onCommentHandler(this.state.postData._id, this.state.commentValue) }}
@@ -103,16 +101,23 @@ class Post extends Component {
                                     />
                                 </div>
                             </div>
-                                <div className="row">
-                                    <div className="PostContainer">
-                                    <div className="Comments">
+                            <div className="row">
+                                <div className="col-12 offset-1">
+                                <div className="PostContainer">
+                                <div className="Comments">
                                     {commentList}
-                                    </div>
-                                    </div>
                                 </div>
-                        </div>
+                                </div>
+                                </div>
+                            </div>
                     </div>
-                </div>                
+
+                    </CardBody>
+                </div>
+                    </div>
+                </div>   
+        </div>
+             
         )
     }
 }

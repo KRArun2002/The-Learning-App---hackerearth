@@ -35,7 +35,7 @@ class Forum extends React.Component {
     return(
       <>
       <div className="Container1">
-        <h3>Discussion Forum</h3>
+      <h3>Discussion Forum</h3>
       <AddPost />
       {allPostList}
       </div>

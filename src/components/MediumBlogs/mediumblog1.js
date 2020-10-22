@@ -28,7 +28,9 @@ class MediumBlogs1 extends Component {
       <React.Fragment>
           <div className="backimg">
             <br/>
-            <h1 style={{color: "white", marginLeft: 400}}>MEDIUM BUSINESS</h1>
+            <div className="offset-3">
+            <h1 style={{color: "white"}}>MEDIUM BUSINESS</h1>
+            </div>
             <br/>
         {this.state.items.map((item) => (
           <BlogCard key={item.key} blog={item} />

@@ -84,9 +84,9 @@ const Home = (props) => {
             </div>
         </div>
         <div className="container">
-            <div className="col">
+            <div className="row">
                 <div className="col-12">
-                <img src={img} alt="img" height="600px"></img>
+                <img class="img2" src={img} alt="img"></img>
                 </div>
             </div>
         </div>
