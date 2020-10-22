@@ -6,11 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 ReactDOM.render(
-  <React.StrictMode>
+    <Auth0Provider
+  domain="dev-s223iecm.us.auth0.com"
+  clientId="XM72QejA6NbNCnanzMSFwDytGYpOhMEh"
+  >
     <App />
-  </React.StrictMode>,
+    </Auth0Provider>,
   document.getElementById('root')
 );
 

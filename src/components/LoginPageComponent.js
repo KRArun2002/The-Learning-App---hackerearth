@@ -7,10 +7,12 @@ import Courses from './CoursesComponent';
 import Support from './SupportComponent';
 import Team from './TeamComponent';
 import Notifications from './NotificationsComponent';
+import { useAuth0 } from "@auth0/auth0-react";
 
-class Loginpage extends Component {
-    render() {
+const Loginpage = () => {
+        const { user, isAuthenticated } = useAuth0();
         return (
+            isAuthenticated && (
             <Router>
                 <Navbar />
                 <br/>
@@ -23,9 +25,8 @@ class Loginpage extends Component {
                     <Route path="/notifications" component={Notifications} />
                 </Switch>
                 </Router>
+            )
         );
     }
-
-}
 
 export default Loginpage; 

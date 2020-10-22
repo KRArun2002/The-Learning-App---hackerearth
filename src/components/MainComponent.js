@@ -17,6 +17,7 @@ import Java from './JavaComponent';
 import Python from './PythonComponent';
 import Biology from './BiologyComponent';
 import Physics from './PhysicsComponent';
+import Contactus from './ContactusComponent';
 
 class Main extends Component {
 
@@ -108,6 +109,13 @@ class Main extends Component {
         )
       }
 
+      const contactus = () => {
+        return(
+          <Contactus />
+        )
+      }
+
+
     return (
       <>
       <div>
@@ -115,6 +123,7 @@ class Main extends Component {
         <Switch>
             <Route path='/home' component={HomePage} />
             <Route path='/forum' component={forumPage} />
+            <Route path='/contactus' component={contactus} />
             <Route path='/mediumblogs' component={mediumPage} />
             <Route path='/mediumblogsbusiness' component={mediumPage1} />
             <Route path='/mediumblogseducation' component={mediumPage2} />

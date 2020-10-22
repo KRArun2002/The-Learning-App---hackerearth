@@ -3,8 +3,13 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron
     ,Button, Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input, Label  } from 'reactstrap';
 import { NavLink, withRouter } from 'react-router-dom';
+import LoginButton from './LoginButton';
+import { useAuth0 } from '@auth0/auth0-react';
+import LogoutButton from './LogoutButton';
+
 
 const img = require("../images/top_pic.gif");
+
 
 class Header extends Component {
 
@@ -56,7 +61,10 @@ class Header extends Component {
       }
 
 
+
   render() {
+    // if (isLoading) return <div>Loading...</div>
+
     return(
     <React.Fragment>
       <Navbar dark expand="md">
@@ -80,20 +88,20 @@ class Header extends Component {
                     <NavLink className="nav-link" to='/popularweb'><span className="fa fa-globe fa-lg"></span> PopularWeb</NavLink>
                 </NavItem>
                 <NavItem style={{marginRight: 12}}>
-                    <NavLink className="nav-link" to='/contact-us'><span className="fa fa-phone fa-lg"></span> Contact Us</NavLink>
+                    <NavLink className="nav-link" to='/contactus'><span className="fa fa-phone fa-lg"></span> Contact Us</NavLink>
                 </NavItem>
             </Nav>
             <Nav className="ml-auto" navbar>
                 <NavItem>
-                    <Button className="btn btn-outline-success btn-sm mr-2" outline onClick={this.toggleModal}>
-                        <span className="fa fa-sign-in fa-lg">  Login</span>
-                    </Button>
+                    {/* <Button className="btn btn-outline-success btn-sm mr-2" outline onClick={this.toggleModal}> */}
+                    <span> <LoginButton /><LogoutButton /></span>
+                    {/* </Button> */}
                 </NavItem>
-                <NavItem>
+                {/* <NavItem>
                     <Button className="btn btn-outline-success btn-sm" outline onClick={this.toggleModal}>
                         <span className="fa fa-user-plus fa-lg">  Signup</span>
                     </Button>
-                </NavItem>
+                </NavItem> */}
 
             </Nav>
         </Collapse>
