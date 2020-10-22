@@ -10,8 +10,8 @@ import { Auth0Provider } from "@auth0/auth0-react";
 
 ReactDOM.render(
     <Auth0Provider
-  domain="dev-s223iecm.us.auth0.com"
-  clientId="XM72QejA6NbNCnanzMSFwDytGYpOhMEh"
+    domain=""
+    clientId=""
   >
     <App />
     </Auth0Provider>,
